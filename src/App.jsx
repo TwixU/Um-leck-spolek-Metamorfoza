@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage';
 import ProgramsPage from './pages/ProgramsPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ThankYouPage from './pages/ThankYouPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         {/* Fallback route */}
         <Route path="*" element={<HomePage />} />

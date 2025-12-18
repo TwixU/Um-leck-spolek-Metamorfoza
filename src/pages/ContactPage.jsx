@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const ContactPage = () => {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,6 +14,7 @@ const ContactPage = () => {
         setTimeout(() => {
             setIsSubmitted(true);
             setFormState({ name: '', email: '', message: '' });
+            navigate('/thank-you');
         }, 1000);
     };
 
